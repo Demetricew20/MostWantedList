@@ -13,20 +13,20 @@
         <title>Most Wanted List</title>
     </head>
     <body >
-        <div class="background"></div>
+        <div class="background">
+            <img class="d-block background-img"    src="./images/investigative.jpg" alt="">
+        </div>
         <div class="search-bar">
             <div class="search-group">
                 <div class="search-outline">
-                    <label class="search-label" for="form1"><strong>Search</strong></label>
-                    <input type="search" id="form1" class="search-form-input" />
-                    <button type="button" class="btn btn-primary search-btn">
-                        <i class="bi-search"></i>
-                    </button>
+                    <label class="search-label" for="form1"></label>
+                    <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 bg-light search-form-input">
+                    <button id="button-addon1" type="submit" class="search-btn btn-link text-primary"><i class="icon bi-search"></i></button>
                 </div>
             </div>
         </div>
         <div class="most-wanted-table"> 
-            <table class="table table-dark table-striped table-hover table-responsive">
+            <table id="verticalScroll" class="table-fixed table table-striped table-dark table-responsive">
                 <thead>
                     <tr class="header-row">
                         <th scope="col">id</th>

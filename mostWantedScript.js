@@ -16,12 +16,6 @@ function populateData(row) {
     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[4].innerHTML = people[row].occupation;
 };
 
-// function displayLastName(row) {
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[1].innerHTML = people[row].lastName;
-// }
-
-// function displayDOB()
-
 function displayData() {
     populateData(0);
     populateData(1);

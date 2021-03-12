@@ -1,4 +1,5 @@
 import {people} from "./data.js";
+import {searchByName} from "./app.js";
 'use strict';
 
 // Table rows for table data begins at tr[1] ///

@@ -37,7 +37,6 @@ body,html,.background {
     left: 36%;
     width: 30%;
     height: 3.75%;
-    text-align: left;
 }
 
 .search-group, .search-outline{
@@ -58,6 +57,7 @@ body,html,.background {
     left: -15%;
     width: 100%;
     height: 97%;
+    padding-left: 3.75vw;
 }
 
 .search-form-input::after {
@@ -67,8 +67,8 @@ body,html,.background {
 .search-btn {
     position: absolute; 
     top: 10.5%;
-    left: 68%;
-    width: 20.5%;
+    left: -15%;
+    width: 5%;
     border-top-left-radius: 10%;
     background-color: transparent;
     font-size: 2vh;

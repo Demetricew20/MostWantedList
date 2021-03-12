@@ -1,10 +1,6 @@
 import {people} from "./data.js";
 'use strict';
 
-
-console.log(people);
-console.log(document.getElementsByTagName('tr')[0].getElementsByTagName('td')[0]);
-
 // Table rows for table data begins at tr[1] ///
 
 function populateData(row) {

@@ -29,6 +29,9 @@ function validateAndSearchForm() {
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = document.forms['nameForm']['fName'].value;
     let lastNameInput = document.forms['nameForm']['lName'].value;
+    let genderInput = document.forms['nameForm']['gender'].value;
+    let eyeColorInput = document.forms['nameForm']['eyeColor'].value;
+    let occupationInput = document.forms['nameForm']['occupation'].value;
 
     let tempArray = [];
 
@@ -37,14 +40,21 @@ function validateAndSearchForm() {
     if (firstNameInput !== "") {
         tempArray.push(firstNameInput)
     }
+
     if (lastNameInput !== "") {
         tempArray.push(lastNameInput)
     }
-    if (field2 !== "") {
-        tempArray.push(field2)
+    if (genderInput !== "") {
+        tempArray.push(genderInput)
     }
-    if (field3 !== "") {
-        tempArray.push(field3)
+    // Check for translation or valid values here ...
+
+    if (eyeColorInput !== "") {
+        tempArray.push(eyeColorInput)
+    }
+
+    if (occupationInput !== "") {
+        tempArray.push(occupationInput)
     }
 
     if (tempArray.length = 0) {

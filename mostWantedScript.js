@@ -12,8 +12,9 @@ function populateData(row) {
 };
 
 function displayData() {
-    for (let i = 0; i < 22; i++){
-        populateData(i);
+    // Changed 21 lines of function calls to this for loop: CRM 3/12/21
+    for (let i = 0; i < 22; i++) {
+        populateData(i)
     }
 };
 

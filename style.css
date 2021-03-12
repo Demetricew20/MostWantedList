@@ -24,7 +24,6 @@ body,html,.background {
 /*Search Form */
 
 .nameForm {
-    border: 1px solid red;
     display: inline-flex;
     z-index: 2;
     position: absolute;
@@ -39,7 +38,7 @@ body,html,.background {
 }
 
 .nameForm > input {
-    width: 10%;
+    width: 12.5%;
 }
 
 

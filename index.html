@@ -15,19 +15,15 @@
     <body >
         <div class="background img-fluid">
             <form id="nameForm" class="nameForm">
-                <label for="fName">id:</label><br>
-                <input type="text" id="id" name="id" value="ID"><br>
-                <label for="lName">First name:</label><br>
-                <input type="text" id="lName" name="lName" value="First"><br><br>
-                <label for="fName">Last name:</label><br>
-                <input type="text" id="fName" name="fName" value="Last"><br>
-                <label for="lName">DOB:</label><br>
-                <input type="text" id="DOB" name="DOB" value="DOB"><br><br>
+                <label for="fName">First:</label><br>
+                <input type="text" id="fName" name="fName" value="First"><br><br>
+                <label for="lName">Last:</label><br>
+                <input type="text" id="lName" name="lName" value="Last"><br>
                 <label for="gender">Gender:</label><br>
                 <input type="text" id="gender" name="gender" value="Gender"><br>
-                <label for="fName">Eye Color:</label><br>
+                <label for="eyeColor">Eye Color:</label><br>
                 <input type="text" id="eyeColor" name="eyeColor" value="Eye Color"><br>
-                <label for="lName">Occupation:</label><br>
+                <label for="occupation">Occupation:</label><br>
                 <input type="text" id="occupation" name="occupation" value="Occupation"><br><br>
                 <input type="button" onclick="searchByName()" value="Submit">
             </form>
@@ -247,6 +243,6 @@
         </div>
         <script type="module" src="mostWantedScript.js" async defer></script>
         <script type="import" src="data.js" async defer></script>
-        <script type="module" src="app.js" async defer></script>
+        <script type="import" src="app.js" async defer></script>
     </body>
 </html>

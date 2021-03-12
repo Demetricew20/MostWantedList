@@ -8,7 +8,6 @@
 body,html,.background {
     height: 100%;
     width: 100%;
-    color: white;
 }
 
 .background {
@@ -25,17 +24,21 @@ body,html,.background {
 /*Search Form */
 
 .nameForm {
-    border: 1px solid red;
+    display: inline-flex;
     z-index: 2;
     position: absolute;
-    top: 20%;
+    top: 10%;
+    left: 10%;
+    width: 85%;
 
 }
 
-.label, .input {
-    position: absolute;
-    left: 50%;
+.nameForm > label {
     color: white;
+}
+
+.nameForm > input {
+    width: 12.5%;
 }
 
 

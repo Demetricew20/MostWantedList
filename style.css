@@ -8,6 +8,7 @@
 body,html,.background {
     height: 100%;
     width: 100%;
+    color: white;
 }
 
 .background {
@@ -21,6 +22,27 @@ body,html,.background {
     height: auto;
 }
 
+/*Search Form */
+
+.nameForm {
+    border: 1px solid red;
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+
+}
+
+.label, .input {
+    position: absolute;
+    left: 50%;
+    color: white;
+}
+
+
+
+
+/* Table */
+
 .most-wanted-table {
     cursor: pointer;
     position: absolute;
@@ -29,49 +51,6 @@ body,html,.background {
     width: 70%;
     height: 52.75%;
     overflow-y: auto;
-}
-
-.search-bar {
-    position: absolute;
-    top: 10%;
-    left: 36%;
-    width: 30%;
-    height: 3.75%;
-}
-
-.search-group, .search-outline{
-    width: 100%;
-    height: 100%;
-
-}
-
-.search-label {
-    position: absolute;
-    font-size: 1.5vw;
-    color:white;
-}
-
-.search-form-input {
-    border-radius: 0;
-    position: absolute;
-    left: -15%;
-    width: 100%;
-    height: 97%;
-    padding-left: 3.75vw;
-}
-
-.search-form-input::after {
-    border-radius: 0;
-}
-
-.search-btn {
-    position: absolute; 
-    top: 10.5%;
-    left: -15%;
-    width: 5%;
-    border-top-left-radius: 10%;
-    background-color: transparent;
-    font-size: 2vh;
 }
 
 /* Scroll Bar */

@@ -12,28 +12,10 @@ function populateData(row) {
 };
 
 function displayData() {
-    populateData(0);
-    populateData(1);
-    populateData(2);
-    populateData(3);
-    populateData(4);
-    populateData(5);
-    populateData(6);
-    populateData(7);
-    populateData(8);
-    populateData(9);
-    populateData(10);
-    populateData(11);
-    populateData(12);
-    populateData(13);
-    populateData(14);
-    populateData(15);
-    populateData(16);
-    populateData(17);
-    populateData(18);
-    populateData(19);
-    populateData(20);
-    populateData(21);
+    // Changed 21 lines of function calls to this for loop: CRM 3/12/21
+    for (let i = 0; i < 22; i++) {
+        populateData(i)
+    }
 };
 
 displayData();

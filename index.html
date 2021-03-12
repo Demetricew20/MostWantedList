@@ -13,15 +13,24 @@
         <title>Most Wanted List</title>
     </head>
     <body >
-        <div class="background img-fluid"></div>
-        <div class="search-bar">
-            <div class="search-group">
-                <div class="search-outline">
-                    <label class="search-label" for=""></label>
-                    <input type="search" id="search" placeholder="Search Name..." aria-describedby="search-btn" class="form-control border-0 bg-light search-form-input">
-                    <button id="search-btn" type="submit" class="search-btn btn-link text-primary"><i class="icon bi-search"></i></button>
-                </div>
-            </div>
+        <div class="background img-fluid">
+            <form id="nameForm" class="nameForm">
+                <label for="fName">id:</label><br>
+                <input type="text" id="id" name="id" value="ID"><br>
+                <label for="lName">First name:</label><br>
+                <input type="text" id="lName" name="lName" value="First"><br><br>
+                <label for="fName">Last name:</label><br>
+                <input type="text" id="fName" name="fName" value="Last"><br>
+                <label for="lName">DOB:</label><br>
+                <input type="text" id="DOB" name="DOB" value="DOB"><br><br>
+                <label for="fName">Gender:</label><br>
+                <input type="text" id="gender" name="gender" value="Gender"><br>
+                <label for="fName">Eye Color:</label><br>
+                <input type="text" id="eyeColor" name="eyeColor" value="Eye Color"><br>
+                <label for="lName">Occupation:</label><br>
+                <input type="text" id="occupation" name="occupation" value="Occupation"><br><br>
+                <input type="button" onclick="searchByName()" value="Submit">
+            </form>
         </div>
         <div class="most-wanted-table" id="most-wanted-table">
             <table id="verticalScroll" class="table-fixed table table-striped table-dark table-responsive">
@@ -31,6 +40,7 @@
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
                         <th scope="col">DOB</th>
+                        <th scope="col">Eye Color</th>
                         <th scope="col">Gender</th>
                         <th scope="col">Occupation</th>
                     </tr>
@@ -38,6 +48,7 @@
                 <tbody>
                     <tr class="row-1">
                         <th scope="row">1</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -51,9 +62,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-3">
                         <th scope="row">3</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -67,9 +80,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-5">
                         <th scope="row">5</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -83,8 +98,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     <tr class="row-7">
                         <th scope="row">7</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -98,9 +115,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-9">
                         <th scope="row">9</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -114,9 +133,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-11">
                         <th scope="row">11</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -130,9 +151,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-13">
                         <th scope="row">13</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -146,9 +169,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-15">
                         <th scope="row">15</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -162,8 +187,10 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     <tr class="row-17">
                         <th scope="row">17</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -177,9 +204,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-19">
                         <th scope="row">19</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -193,6 +222,7 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-21">
                         <th scope="row">21</th>
@@ -201,9 +231,11 @@
                         <td></td>
                         <td></td>
                         <td></td>
+                        <td></td>
                     </tr>
                     <tr class="row-22">
                         <th scope="row">22</th>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

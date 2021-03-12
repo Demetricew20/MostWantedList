@@ -1,5 +1,6 @@
-import {people} from "./data.js";
 'use strict';
+
+const _ = require('./data.js');
 
 // Table rows for table data begins at tr[1] ///
 
@@ -19,7 +20,3 @@ function displayData() {
 };
 
 displayData();
-
-
-
-

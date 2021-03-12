@@ -287,5 +287,3 @@ const people = [
 		"currentSpouse": null
 	}
 ];
-
-export {people};

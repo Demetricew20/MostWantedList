@@ -20,6 +20,8 @@ function displayData() {
 
 displayData();
 
+let clickTable = document.getElementsByClassName('row-1').
+
 
 
 

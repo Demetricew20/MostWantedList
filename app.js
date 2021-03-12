@@ -21,7 +21,7 @@ async function searchByParms(someArray){
         alert('Sorry, looks like there is no one with that search criteria.');
         console.log('Sorry, looks like there is no one with that search criteria.');
     }
-}
+};
 
 
 // ----- Form validation ----- //
@@ -55,4 +55,4 @@ function validateAndSearchForm() {
         searchByParms(tempArray); // async function call
         return true
     }
-}
+};

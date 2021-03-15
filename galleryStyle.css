@@ -1,0 +1,45 @@
+* {
+    border: 1px solid red;
+}
+
+.container {
+    height: 100vmax;
+    width: auto;
+}
+
+.divheight {
+    height: 30vh;
+}
+
+
+.background {
+    content: "";
+    position: absolute;     
+    z-index: -1;   
+    top: 0;      
+    left: 0;      
+    bottom: 0;      
+    right: 0;
+    height: 100vmax;
+    width: auto;      
+    background-image:url('./images/investigative.jpg');      
+    background-repeat:no-repeat;      
+    background-size: cover;      
+    background-position:center;      
+    opacity: 1;
+}
+
+
+
+
+
+.gallery {
+    background-color: rgb(92, 86, 86);
+    vertical-align: middle;
+}
+
+.card {
+    height: 15vmax;
+    width: 10vmax;
+    display: inline-flex;
+}

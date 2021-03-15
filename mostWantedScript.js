@@ -28,18 +28,30 @@
 
 function populateData(row)
 {
-    let firstColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[0].innerHTML = people[row].id;
-    let secondColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[1].innerHTML = people[row].firstName;
-    let thirdColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[2].innerHTML = people[row].lastName;
-    let fourthColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[3].innerHTML = people[row].dob;
-    let fifthColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[4].innerHTML = people[row].gender;
-    let sixthColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[5].innerHTML = people[row].eyeColor;
-    let seventhColumn = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[6].innerHTML = people[row].occupation;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[0].innerHTML = people[row].id;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[1].innerHTML = people[row].firstName;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[2].innerHTML = people[row].lastName;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[3].innerHTML = people[row].dob;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[4].innerHTML = people[row].gender;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[5].innerHTML = people[row].eyeColor;
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[6].innerHTML = people[row].occupation;
+
+    // Add Spouse // 
+    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[7].innerHTML = people[row].currentSpouse;
 
     // ****** Add photos for each person in table ****** ///
-    let photos = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[7].innerHTML = '<button id="photo">Photo</button>';
-    let showPhoto = document.getElementById('photo').addEventListener('click', function(){
-        document.getElementById('photo').innerHTML = '<img src="https://picsum.photos/200/300" alt="Random Photo" />';
+    let photos = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[8];
+    photos.innerHTML = '<button id="photo">Photo</button>';
+    photos.addEventListener('click', function(){
+
+        if (photos.innerHTML == '<button id="photo">Photo</button>')
+        {
+            photos.innerHTML = '<img id="photo" src="https://picsum.photos/100/100" alt="Random Photo" />';
+        }
+        else
+        {
+            photos.innerHTML = '<button id="photo">Photo</button>';
+        }
     });
 
 };

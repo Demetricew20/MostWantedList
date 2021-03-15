@@ -80,6 +80,10 @@ thead {
     text-align: center;
 }
 
+#photo{
+    cursor: pointer;
+}
+
 
  /* Scroll Bar */
 

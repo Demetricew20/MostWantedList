@@ -1,97 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-
+    /* border: 1px solid red; */
 }
 
-body,html,.background {
-    height: 100%;
-    width: 100%;
+.container {
+    height: 100vmax;
+    width: auto;
 }
+
+.divheight {
+    height: 14vh;
+}
+
 
 .background {
-    background-image: url(./images/investigative.jpg);
-    background-size: cover;
-    opacity: .85;
+    content: "";
+    position: absolute;     
+    z-index: -1;   
+    top: 0;      
+    left: 0;      
+    bottom: 0;      
+    right: 0;
+    height: 100vmax;
+    width: auto;      
+    background-image:url('./images/investigative.jpg');      
+    background-repeat:no-repeat;      
+    background-size: cover;      
+    background-position:center;      
+    opacity: 1;
 }
 
-.background-img {
-    max-width: 100%;
-    height: auto;
-}
+/*  Search Fields   */
 
-/*Search Form */
-
-.nameForm {
-    display: inline-flex;
-    z-index: 2;
-    position: absolute;
-    top: 7%;
-    left: 15.5%;
-    width: 70%;
-    height: 13.5%;
-    padding: .5vw;
-    justify-content: space-around;
+.search-column {
+    margin: .75vmax;
     color: white;
 }
 
-/* .search-columns {
-    
-} */
-
-.search-columns > label {
-    font-size: 1.25vw;
-}
-
-.search-columns > label > input {
-    font-size: 1.25vw;
-    margin-left: .25vw;
-    background-color: rgb(238, 230, 230);
-    color: black;
-}
-
-.search-columns > .eyeColor {
+.eyeColor {
     position: relative;
-    right: 5.75%;
+    right: 4%;
+}
+
+.occupation {
+    position: relative;
+    right: 6.5%;
 }
 
 .search-button {
+    z-index: 1;
     position: relative;
-    left: 40%;
-    width: 10vw;
-    height: 1.75vw;
-    font-size: 1.25vw;
-    font-weight: bold;
-    text-align: center;
-    line-height: 1px;
-    background-color: rgb(134, 127, 127);
-    transition: background-color 1s ease;
-    transition: color .975s ease;
+    left: 30%;
+    width: 45%;
+    cursor: pointer;
+    transition: all 1s ease;
 }
 
 .search-button:hover {
-    background-color: rgb(45,71,102);
-    color: white;
+    background-color: rgb(26, 87, 157);
+    color:  white;
+}
+
+/* TABLE */
+
+
+.table {
+    margin-bottom: 0;
+}
+
+.tableDiv {
+    overflow: auto;
+    height: 40vmax;
+    width: 90%;
+    padding: 0;
+    margin-top: .75vmax;
+    text-align: center;
+}
+
+thead {
+    text-align: center;
 }
 
 
-/* Table */
+ /* Scroll Bar */
 
-.most-wanted-table {
-    cursor: pointer;
-    position: absolute;
-    top: 20%;
-    left: 15.5%;
-    width: 70%;
-    height: 52.75%;
-    overflow-y: auto;
-}
-
-/* Scroll Bar */
 ::-webkit-scrollbar {
-    width: 1.5vh;
-    height: 1.5vh;
+    width: .75vmax;
+    height: 1vmax;
 }
 
 ::-webkit-scrollbar-track {
@@ -109,17 +103,8 @@ body,html,.background {
 
 
 
-
-
-
-
-
 /* Media Breakpoints */
 
-@media (min-width: 1200px) 
-{ 
-
-}
 
 @media (min-width: 1200px)
 { 

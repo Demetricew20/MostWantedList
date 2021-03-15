@@ -82,7 +82,7 @@ function addElement () {
 };
 
 // Function Calls //
-testDataRtv();
+// testDataRtv(); // Testing Routing only
 window.onload = addElement();
 // insertData();
 

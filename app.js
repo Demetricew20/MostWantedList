@@ -23,6 +23,8 @@ function rtvPeopleByID(personID) {
             personArray = Object.values(person);
             console.log("Person Array:", personArray)
             return personArray
+            // The next line will NOT pass back the array. Suspect that it has to do with the "Object.values' function written as inline expression
+            // return personArray = Object.values(person)
         }
     })
 }
@@ -74,38 +76,25 @@ function validateAndSearchForm() {
     let eyeColorInput = document.forms['nameForm']['eyeColor'].value;
     let occupationInput = document.forms['nameForm']['occupation'].value;
 
-    let tempArray = [];
+    let tempArray = ['','','','',''];
 
     // Check for a minium of at least 1 required variable
     // build temp array of search variables
     if (firstNameInput !== "") {
-        tempArray.push(firstNameInput)
-    } else {
-        tempArray.push("")
+        tempArray[0] =firstNameInput
     }
-
     if (lastNameInput !== "") {
-        tempArray.push(lastNameInput)
-    }else {
-        tempArray.push("")
+        tempArray[1] = lastNameInput
     }
     if (genderInput !== "") {
-        tempArray.push(genderInput)
-    }else {
-        tempArray.push("")
+        tempArray[2] = genderInput
     }
     // Check for translation or valid values here ...
-
     if (eyeColorInput !== "") {
-        tempArray.push(eyeColorInput)
-    }else {
-        tempArray.push("")
+        tempArray[3] = eyeColorInput.lowerCase()
     }
-
     if (occupationInput !== "") {
-        tempArray.push(occupationInput)
-    }else {
-        tempArray.push("")
+        tempArray[4] = occupationInput
     }
 
     console.log("TempArray:", tempArray)

@@ -5,6 +5,9 @@ async function searchByParms(someArray){
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = someArray[0];
     let lastNameInput = someArray[1];
+    let genderInput = someArray[2];
+    let eyeColorInput = someArray[3];
+    let occupation = someArray[4];
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = await people.filter(function (person) {

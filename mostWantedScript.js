@@ -41,10 +41,10 @@ function populateData(row)
     let showPhoto = document.getElementById('photo').addEventListener('click', function(){
         document.getElementById('photo').innerHTML = '<img src="https://picsum.photos/200/300" alt="Random Photo" />';
     });
-    
+
 };
 
-// ----Adds td and tr tags in tbody of mostWantedTable---- // 
+// ----Adds td and tr tags in tbody of mostWantedTable---- //
 function addElement () {
 
     let tableBody = document.getElementById('tableBody');
@@ -73,6 +73,7 @@ function addElement () {
 };
 
 // Function Calls //
+testDataRtv();
 window.onload = addElement();
 // insertData();
 

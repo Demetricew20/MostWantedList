@@ -1,39 +1,64 @@
 'use strict';
 
-// ----- Search function -----
-async function searchByParms(someArray){
+function testDataRtv() {
+    for (let i = 0; i < people.length; i++) {
+        let testData = rtvPeopleByID(people[i].id)
+        console.log(testData)
+    }
+}
+
+// ----- RTV People by ID ------ //
+function rtvPeopleByID(personID) {
+    var personArray = [];
+
+    if (personID === "") {
+        console.log("Error: Missing person ID");
+        return personArray
+    }
+
+    // Switched from "filter" to "find" -
+    // Filter will iterate over entire database, find will stop after first valid occurance
+    people.find(function (person) {
+        if (personID === person.id) {
+            personArray = Object.values(person);
+            console.log("Person Array:", personArray)
+            return personArray
+        }
+    })
+}
+
+// ----- RTV People by Search params ----- //
+async function searchByParms(someArray) {
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = someArray[0];
     let lastNameInput = someArray[1];
     let genderInput = someArray[2];
     let eyeColorInput = someArray[3];
-    let occupation = someArray[4];
+    let occupationInput = someArray[4];
 
-    if (firstNameInput !== "" && person.firstName !== firstNameInput) {
-        return false
-    } else if (lastNameInput !== "" & person.lastName !== lastNameInput) {
-        return false
-    } else if (genderInput !== "" && person.gender !== genderInput) {
-        return false
-    } else if (eyeColorInput !== "" && person.eyeColor !== eyeColorInput) {
-        return false
-    } else if (occupationInput !== "" && person.occupation !== occupationInput) {
-        return false
-    } else return true
-    
-    }
+
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = await people.filter(function (person) {
-        if(person.firstName === firstNameInput && person.lastName === lastNameInput){
-            return true;
+        if (firstNameInput !== "" && person.firstName !== firstNameInput) {
+            return false
+        } else if (lastNameInput !== "" && person.lastName !== lastNameInput) {
+            return false
+        } else if (genderInput !== "" && person.gender !== genderInput) {
+            return false
+        } else if (eyeColorInput !== "" && person.eyeColor !== eyeColorInput) {
+            return false
+        } else if (occupationInput !== "" && person.occupation !== occupationInput) {
+            return false
         }
-        return false;
-    });
+        return true
+
+    }
+    );
 
     // Rather than console logging, you need to append the filteredPeople to a table.
-    if(filteredPeople.length > 0){
+    if (filteredPeople.length > 0) {
         console.log(filteredPeople);
-    }else{
+    } else {
         alert('Sorry, looks like there is no one with that search criteria.');
         console.log('Sorry, looks like there is no one with that search criteria.');
     }
@@ -55,29 +80,41 @@ function validateAndSearchForm() {
     // build temp array of search variables
     if (firstNameInput !== "") {
         tempArray.push(firstNameInput)
+    } else {
+        tempArray.push("")
     }
 
     if (lastNameInput !== "") {
         tempArray.push(lastNameInput)
+    }else {
+        tempArray.push("")
     }
     if (genderInput !== "") {
         tempArray.push(genderInput)
+    }else {
+        tempArray.push("")
     }
     // Check for translation or valid values here ...
 
     if (eyeColorInput !== "") {
         tempArray.push(eyeColorInput)
+    }else {
+        tempArray.push("")
     }
 
     if (occupationInput !== "") {
         tempArray.push(occupationInput)
+    }else {
+        tempArray.push("")
     }
 
-    if (tempArray.length = 0) {
+    console.log("TempArray:", tempArray)
+    if (tempArray.length === 0) {
         alert('You must enter an option in at least one search field.');
         console.log('You must enter an option in at least one search field.');
         return false
     } else {
+        console.log("TempArray:", tempArray)
         searchByParms(tempArray); // async function call
         return true
     }

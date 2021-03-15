@@ -36,11 +36,8 @@ function populateData(row)
     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[5].innerHTML = people[row].eyeColor;
     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[6].innerHTML = people[row].occupation;
 
-    // Add Spouse // 
-    document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[7].innerHTML = people[row].currentSpouse;
-
     // ****** Add photos for each person in table ****** ///
-    let photos = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[8];
+    let photos = document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[7];
     photos.innerHTML = '<button id="photo">Photo</button>';
     photos.addEventListener('click', function(){
 

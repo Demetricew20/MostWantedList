@@ -9,6 +9,19 @@ async function searchByParms(someArray){
     let eyeColorInput = someArray[3];
     let occupation = someArray[4];
 
+    if (firstNameInput !== "" && person.firstName !== firstNameInput) {
+        return false
+    } else if (lastNameInput !== "" & person.lastName !== lastNameInput) {
+        return false
+    } else if (genderInput !== "" && person.gender !== genderInput) {
+        return false
+    } else if (eyeColorInput !== "" && person.eyeColor !== eyeColorInput) {
+        return false
+    } else if (occupationInput !== "" && person.occupation !== occupationInput) {
+        return false
+    } else return true
+    
+    }
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
     let filteredPeople = await people.filter(function (person) {
         if(person.firstName === firstNameInput && person.lastName === lastNameInput){

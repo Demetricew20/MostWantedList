@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 .container {
     height: 100vmax;
@@ -10,6 +10,28 @@
 .divheight {
     height: 14vh;
 }
+
+/* NavBar */
+
+nav {
+    background-color: rgb(163,163,163);
+    height: 4vmax;
+}
+
+.navbar-toggler {
+    height: 4.15vmax;
+    position: relative;
+    bottom: 1.25vmax;
+    transform: scale(.75);
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    bottom: .775vmax;
+}
+
+
+/* Title */
 
 
 .background {
@@ -117,6 +139,9 @@ thead {
 
 @media (min-width: 992px) 
 {
+    nav {
+        height: 2.5vmax;
+    }
 
 }
 

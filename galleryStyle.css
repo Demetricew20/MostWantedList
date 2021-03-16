@@ -1,6 +1,6 @@
-* {
+/* * {
     border: 1px solid red;
-}
+} */
 
 .container {
     height: 100vmax;
@@ -8,9 +8,28 @@
 }
 
 .divheight {
-    height: 30vh;
+    height: 40vmin;
 }
 
+/* NavBar*/
+nav {
+    background-color: rgb(163,163,163);
+    height: 4vmax;
+}
+
+.navbar-toggler {
+    height: 4.15vmax;
+    position: relative;
+    bottom: 1.25vmax;
+    transform: scale(.75);
+}
+
+.navbar-toggler-icon {
+    position: relative;
+    bottom: .775vmax;
+}
+
+/* Background */
 
 .background {
     content: "";
@@ -20,26 +39,113 @@
     left: 0;      
     bottom: 0;      
     right: 0;
-    height: 100vmax;
+    height: 125vmax;
     width: auto;      
-    background-image:url('./images/investigative.jpg');      
+    background-image:url('/images/greyScale_background.jpg');   
     background-repeat:no-repeat;      
     background-size: cover;      
     background-position:center;      
     opacity: 1;
 }
 
+/* Title */
 
-
-
-
-.gallery {
-    background-color: rgb(92, 86, 86);
+.title {
     vertical-align: middle;
 }
 
+.title > h1 {
+    color: white;
+    position: relative;
+    font-family: monospace;
+    font-size: 6vmax;
+    text-shadow: .475rem .2rem  black;
+    
+}
+
+
+
+
+/* Gallery */
+
 .card {
-    height: 15vmax;
-    width: 10vmax;
+    height: 12vmax;
     display: inline-flex;
+    margin:  2vmax;
+    padding: 0;
+}
+
+.card > * {
+    color: black;
+}
+
+.card-img {
+    height: 12vmax;
+}
+
+.card-title, .card-text {
+    opacity: .7;
+}
+
+
+ /* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: .75vmax;
+    height: 1vmax;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(92, 88, 88); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(111, 109, 109); 
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1200px)
+{ 
+
+
+}
+
+@media (min-width: 992px) 
+{
+    nav {
+        height: 2.5vmax;
+    }
+    
+}
+
+@media (max-width: 768px) 
+{
+    .card-text {
+        display: none;
+    }
+
+    .title > h1 {
+        text-shadow: .5vmax .35vmax black;
+        
+    }
+}
+
+@media (max-width: 576px) 
+{
+    .card-text, .card-title {
+        display: none;
+    }
 }

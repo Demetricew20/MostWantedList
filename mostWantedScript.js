@@ -59,10 +59,14 @@ function addElement() {
 function buildRow(rowTypeString, id, currRow, tableBody) {
     let tempRow = rowTypeString;
     let tempPerson = rtvPeopleByID(id);
-    tempRow = tempRow + tempPerson + ' ' + tempPerson[1];
-    let row = tableBody.insertRow(currRow);
-    row.insertCell(0)
-    document.getElementsByTagName('tr')[currRow].getElementsByTagName('td')[1].innerHTML = tempRow
+    tempRow = tempRow + tempPerson[1] + ' ' + tempPerson[2];
+
+    let newRow = tableBody.insertRow(currRow);
+    // newRow.insertCell(0)
+    let someEl = newRow.insertCell(0);
+    someEl = newRow.insertCell(1);
+    someEl.innerText = tempRow
+    // document.getElementsByTagName('tr')[currRow].getElementsByTagName('td')[1].innerHTML = tempRow
 }
 
 function loadTable(someArray) {
@@ -72,7 +76,8 @@ function loadTable(someArray) {
     // let row = tableBody.insertRow(currentRow-1)
     for (let i = 0; i < someArray.length; i++) {
         // add row
-        let tempArray = [someArray[i].firstName,
+        let tempArray = [someArray[i].id,
+            someArray[i].firstName,
             someArray[i].lastName,
             someArray[i].dob,
             someArray[i].gender,
@@ -82,30 +87,20 @@ function loadTable(someArray) {
         let row = tableBody.insertRow(currentRow)
         // build cells
         for (let j = 0; j < tableHeaders.length; j++) {
-            row.insertCell(j);
-            row.insertCell.innerText = tempArray[j]
+            let someEl = row.insertCell(j);
+            someEl.innerText = tempArray[j]
         }
 
-            //let personArray = Object.value(someArray[i]);
-        console.log(" i:" + i + " element: " + someArray[i].firstName)
-
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[0].innerText = someArray[i].firstName;
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[1].innerText = someArray[i].lastName;
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[2].innerText = someArray[i].dob;
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[3].innerText = someArray[i].gender;
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[4].innerText = someArray[i].eyeColor;
-            // document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[5].innerText = someArray[i].occupation;
-
-            // Add photo button here
+          // Add photo button here
 
             // Add Spouse
-            if (someArray[i].currentSpouse !== "") {
+            if (someArray[i].currentSpouse) {
                 currentRow++;
                 buildRow("Spouse: ", someArray[i].currentSpouse, currentRow, tableBody)
             }
 
             // Add Parents
-            if (someArray[i].parents !== "") {
+            if (someArray[i].parents.length > 0) {
                 for (let j = 0; j < someArray[i].parents.length; j++) {
                     currentRow++;
                     buildRow("Parent: ", someArray[i].parents[j],currentRow,tableBody)

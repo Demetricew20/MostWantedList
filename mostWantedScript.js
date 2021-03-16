@@ -43,6 +43,9 @@ function loadTable(someArray) {
         // ****** Add photos for each person in table ****** ///
         let photos = row.insertCell(tableHeaders.length - 1)
         let photoHtml = "no-img.png"
+
+        // <button type = "submit" name = "learn" value = "myimage"><img src="https://www.tutorialspoint.com/latest/inter-process-communication.png " /></button>
+        // <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoPromptModal"> </button>
         if (someArray[i].photo) {
             photoHtml = someArray[i].photo
         }

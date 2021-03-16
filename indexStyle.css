@@ -2,6 +2,10 @@
     border: 1px solid red;
 } */
 
+body, html {
+    background-color: rgb(33,37,41);
+}
+
 .container {
     height: 100vmax;
     width: auto;
@@ -14,12 +18,11 @@
 /* NavBar */
 
 nav {
-    /* background-color: rgb(163,163,163); */
-    height: 4vmax;
+    height: 5vmax;
 }
 
 .navbar-toggler {
-    height: 4.15vmax;
+    height: 4.5vmax;
     position: relative;
     bottom: 1.25vmax;
     transform: scale(.75);
@@ -28,6 +31,15 @@ nav {
 .navbar-toggler-icon {
     position: relative;
     bottom: .775vmax;
+}
+
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255)
 }
 
 
@@ -146,7 +158,6 @@ thead {
     nav {
         height: 2.5vmax;
     }
-
 }
 
 @media (min-width: 768px)

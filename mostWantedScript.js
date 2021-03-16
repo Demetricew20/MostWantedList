@@ -96,6 +96,5 @@ function deleteTable() {
     }
 }
 
-
 // Function Calls //
 window.onload = loadTable(people)

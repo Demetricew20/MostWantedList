@@ -86,26 +86,32 @@ function validateAndSearchForm() {
     let tempArray = ['','','','',''];
 
     // Check for a minium of at least 1 required variable
+    let valueEntered = false;
     // build temp array of search variables
     if (firstNameInput !== "") {
-        tempArray[0] =firstNameInput
+        tempArray[0] = firstNameInput;
+        valueEntered = true;
     }
     if (lastNameInput !== "") {
-        tempArray[1] = lastNameInput
+        tempArray[1] = lastNameInput;
+        valueEntered = true;
     }
     if (genderInput !== "") {
-        tempArray[2] = genderInput
+        tempArray[2] = genderInput;
+        valueEntered = true;
     }
     // Check for translation or valid values here ...
     if (eyeColorInput !== "") {
-        tempArray[3] = eyeColorInput
+        tempArray[3] = eyeColorInput;
+        valueEntered = true;
     }
     if (occupationInput !== "") {
-        tempArray[4] = occupationInput
+        tempArray[4] = occupationInput;
+        valueEntered = true;
     }
 
     console.log("TempArray:", tempArray)
-    if (tempArray.length === 0) {
+    if (!valueEntered) {
         alert('You must enter an option in at least one search field.');
         console.log('You must enter an option in at least one search field.');
         return false

@@ -68,7 +68,7 @@ nav {
     right: 6.5%;
 }
 
-.search-button {
+/* .search-button {
     z-index: 1;
     position: relative;
     left: 30%;
@@ -80,6 +80,10 @@ nav {
 .search-button:hover {
     background-color: rgb(26, 87, 157);
     color:  white;
+} */
+
+.span-shift {
+    margin-left: 75px;
 }
 
 /* TABLE */

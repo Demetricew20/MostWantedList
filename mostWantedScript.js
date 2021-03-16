@@ -42,7 +42,7 @@ function loadTable(someArray) {
 
         // ****** Add photos for each person in table ****** ///
         let photos = row.insertCell(tableHeaders.length - 1)
-          // -- Button trigger modal --
+        // -- Button trigger modal --
         let photoHtml = '<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#photoPromptModal" >'
             + '<img src="./images/no-img.png " width="45" height="50" /></button>'
 
@@ -51,17 +51,6 @@ function loadTable(someArray) {
             '" width="45" height="50" alt="person photo" />'
         }
             photos.innerHTML = photoHtml;
-        // photos.innerHTML = '<button id="photo">Photo</button>';
-        // photos.addEventListener('click', function(){
-        //     if (photos.innerHTML == '<button id="photo">Photo</button>')
-        //     {
-        //         photos.innerHTML = '<img id="photo" src="https://picsum.photos/50/50" alt="Random Photo" />';
-        //     }
-        //     else
-        //     {
-        //         photos.innerHTML = '<button id="photo">Photo</button>';
-        //     }
-        // });
 
         // Add Spouse
         if (someArray[i].currentSpouse) {

@@ -9,7 +9,7 @@ function testDataRtv() {
 
 // ----- RTV People by ID ------ //
 function rtvPeopleByID(personID) {
-    var personArray = [];
+    let personArray = new Array;
 
     if (personID === "") {
         console.log("Error: Missing person ID");
@@ -21,12 +21,10 @@ function rtvPeopleByID(personID) {
     people.find(function (person) {
         if (personID === person.id) {
             personArray = Object.values(person);
-            // console.log("Person Array:", personArray)
-            return personArray
-            // The next line will NOT pass back the array. Suspect that it has to do with the "Object.values' function written as inline expression
-            // return personArray = Object.values(person)
+            return true
         }
     })
+    return personArray
 }
 
 // ----- RTV People by Search params ----- //

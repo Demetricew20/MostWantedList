@@ -1,31 +1,5 @@
 'use strict';
 
-// const _ = require('./data.js');
-
-//// Table rows for table data begins at tr[1] ///
-
-// function populateData(row) {
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[0].innerHTML = people[row].firstName;
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[1].innerHTML = people[row].lastName;
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[2].innerHTML = people[row].dob;
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[3].innerHTML = people[row].eyeColor;
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[4].innerHTML = people[row].gender;
-//     document.getElementsByTagName('tr')[row+1].getElementsByTagName('td')[5].innerHTML = people[row].occupation;
-// };
-
-
-
-// function displayData() {
-//     // Changed 21 lines of function calls to this for loop: CRM 3/12/21
-//     for (let i = 0; i < 22; i++) {
-//         populateData(i)
-//     }
-// };
-
-// displayData();
-
-//// Table rows for table data begins at tr[1] ///
-
 function populateData(row)
 {
 
@@ -54,7 +28,7 @@ function populateData(row)
 
 };
 
-// ----Adds td and tr tags in tbody of mostWantedTable---- //
+// ----Adds td and tr tags in the body of mostWantedTable---- //
 function addElement() {
 
     let tableBody = document.getElementById('tableBody');
@@ -85,11 +59,14 @@ function addElement() {
 function buildRow(rowTypeString, id, currRow, tableBody) {
     let tempRow = rowTypeString;
     let tempPerson = rtvPeopleByID(id);
-    tempRow = tempRow + tempPerson[0] + ' ' + tempPerson[1];
-    let row = tableBody.insertRow(currRow);
-    row.insertCell(0)
-    row.insertCell(1)
-    document.getElementsByTagName('tr')[currRow].getElementsByTagName('td')[1].innerHTML = tempRow
+    tempRow = tempRow + tempPerson[1] + ' ' + tempPerson[2];
+
+    let newRow = tableBody.insertRow(currRow);
+    // newRow.insertCell(0)
+    let someEl = newRow.insertCell(0);
+    someEl = newRow.insertCell(1);
+    someEl.innerText = tempRow
+    // document.getElementsByTagName('tr')[currRow].getElementsByTagName('td')[1].innerHTML = tempRow
 }
 
 function loadTable(someArray) {
@@ -99,35 +76,34 @@ function loadTable(someArray) {
     // let row = tableBody.insertRow(currentRow-1)
     for (let i = 0; i < someArray.length; i++) {
         // add row
+        let tempArray = [someArray[i].id,
+            someArray[i].firstName,
+            someArray[i].lastName,
+            someArray[i].dob,
+            someArray[i].gender,
+            someArray[i].eyeColor,
+            someArray[i].occupation]
+
         let row = tableBody.insertRow(currentRow)
         // build cells
         for (let j = 0; j < tableHeaders.length; j++) {
-            row.insertCell(j)
+            let someEl = row.insertCell(j);
+            someEl.innerText = tempArray[j]
         }
 
-            //let personArray = Object.value(someArray[i]);
-        console.log(" i:" + i + " element: " + someArray[i].firstName)
-
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[0].innerText = someArray[i].firstName;
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[1].innerText = someArray[i].lastName;
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[2].innerText = someArray[i].dob;
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[3].innerText = someArray[i].gender;
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[4].innerText = someArray[i].eyeColor;
-            document.getElementsByTagName('tr')[currentRow].getElementsByTagName('td')[5].innerText = someArray[i].occupation;
-
-            // Add photo button here
+          // Add photo button here
 
             // Add Spouse
-            if (someArray[i].spouse !== "") {
+            if (someArray[i].currentSpouse) {
                 currentRow++;
-                buildRow("Spouse: ", someArray[i].spouse, currentRow)
+                buildRow("Spouse: ", someArray[i].currentSpouse, currentRow, tableBody)
             }
 
             // Add Parents
-            if (someArray[i].parents !== "") {
+            if (someArray[i].parents.length > 0) {
                 for (let j = 0; j < someArray[i].parents.length; j++) {
                     currentRow++;
-                    buildRow("Parent: ", someArray[i].parents[j])
+                    buildRow("Parent: ", someArray[i].parents[j],currentRow,tableBody)
                 }
             }
 

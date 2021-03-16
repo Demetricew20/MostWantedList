@@ -74,10 +74,10 @@ nav {
     display: inline-flex;
     margin:  2vmax;
     padding: 0;
-}
-
-.card > * {
-    color: black;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: .75vmax;
 }
 
 .card-img {
@@ -85,7 +85,8 @@ nav {
 }
 
 .card-title, .card-text {
-    opacity: .7;
+    opacity: .85;
+    position: relative;
 }
 
 
@@ -132,6 +133,25 @@ nav {
 
 }
 
+@media (max-width: 992px)
+{
+    nav {
+        height: 2.5vmax;
+    }
+
+    .card-text {
+        display: none;
+    }
+
+    .card-title {
+        font-size: 2vmax;
+    }
+
+}
+
+
+
+
 @media (max-width: 768px)
 {
     .card-text {
@@ -146,6 +166,10 @@ nav {
 
 @media (max-width: 576px)
 {
+    .card {
+        transform: scale(1.75, 1);
+    }
+    
     .card-text, .card-title {
         display: none;
     }

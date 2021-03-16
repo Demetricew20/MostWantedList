@@ -9,7 +9,7 @@ function testDataRtv() {
 
 // ----- RTV People by ID ------ //
 function rtvPeopleByID(personID) {
-    var personArray = [];
+    let personArray = new Array;
 
     if (personID === "") {
         console.log("Error: Missing person ID");

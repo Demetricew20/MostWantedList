@@ -36,18 +36,18 @@ nav {
 
 .background {
     content: "";
-    position: absolute;     
-    z-index: -1;   
-    top: 0;      
-    left: 0;      
-    bottom: 0;      
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
     right: 0;
     height: 100vmax;
-    width: auto;      
-    background-image:url('./images/investigative.jpg');      
-    background-repeat:no-repeat;      
-    background-size: cover;      
-    background-position:center;      
+    width: auto;
+    background-image:url('./images/investigative.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
     opacity: 1;
 }
 
@@ -115,15 +115,15 @@ thead {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: rgb(92, 88, 88); 
+    background: rgb(92, 88, 88);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(111, 109, 109); 
+    background: rgb(111, 109, 109);
 }
 
 
@@ -133,11 +133,11 @@ thead {
 
 
 @media (min-width: 1200px)
-{ 
+{
 
 }
 
-@media (min-width: 992px) 
+@media (min-width: 992px)
 {
     nav {
         height: 2.5vmax;
@@ -145,12 +145,12 @@ thead {
 
 }
 
-@media (min-width: 768px) 
+@media (min-width: 768px)
 {
 
 }
 
-@media (min-width: 576px) 
+@media (min-width: 576px)
 {
 
 }

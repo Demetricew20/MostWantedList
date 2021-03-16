@@ -74,6 +74,13 @@ function loadTable(someArray) {
             }
         }
 
+        // Add Children
+        let someChildren = rtvChildByParentID(someArray[i].id);
+        for (let i = 0; i < someChildren.length; i++) {
+            currentRow++;
+            buildRow("Child: ", someChildren[i],currentRow, tableHeaders, tableBody)
+        }
+
             currentRow++;
         }
 

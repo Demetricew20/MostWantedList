@@ -1,15 +1,22 @@
 'use strict';
 
-function testDataRtv() {
+// ----- RTV Child by ParentID ----- //
+function rtvChildByParentID(parentID) {
+    let childArray = [];
+    // Iterate through database and then search parents someArray
     for (let i = 0; i < people.length; i++) {
-        let testData = rtvPeopleByID(people[i].id)
-        console.log(testData)
+        if (parentID == people[i].parents[0] || parentID == people[i].parents[1]) {
+            // child found
+            // store in an array
+            childArray.push(people[i].id)
+        }
     }
+    return childArray;
 }
 
 // ----- RTV People by ID ------ //
 function rtvPeopleByID(personID) {
-    let personArray = new Array;
+    let personArray = [];
 
     if (personID === "") {
         console.log("Error: Missing person ID");

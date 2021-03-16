@@ -28,7 +28,7 @@ function rtvPeopleByID(personID) {
 }
 
 // ----- RTV People by Search params ----- //
-async function searchByParms(someArray) {
+function searchByParms(someArray) {
     // Grabbing the values from our nameForm form and inputs.
     let firstNameInput = someArray[0];
     let lastNameInput = someArray[1];
@@ -38,7 +38,7 @@ async function searchByParms(someArray) {
 
 
     // "people" is coming from the data.js file. We have access to it within this JavaScript file.
-    let filteredPeople = await people.filter(function (person) {
+    let filteredPeople = people.filter(function (person) {
         if (firstNameInput !== "" && person.firstName !== firstNameInput) {
             return false
         } else if (lastNameInput !== "" && person.lastName !== lastNameInput) {
@@ -58,6 +58,8 @@ async function searchByParms(someArray) {
     // Rather than console logging, you need to append the filteredPeople to a table.
     if (filteredPeople.length > 0) {
         console.log(filteredPeople);
+        deleteTable();
+        loadTable(filteredPeople);
     } else {
         alert('Sorry, looks like there is no one with that search criteria.');
         console.log('Sorry, looks like there is no one with that search criteria.');
@@ -89,7 +91,7 @@ function validateAndSearchForm() {
     }
     // Check for translation or valid values here ...
     if (eyeColorInput !== "") {
-        tempArray[3] = eyeColorInput.lowerCase()
+        tempArray[3] = eyeColorInput
     }
     if (occupationInput !== "") {
         tempArray[4] = occupationInput

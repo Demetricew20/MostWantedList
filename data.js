@@ -11,7 +11,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "programmer",
 		"parents": [],
-		"currentSpouse": 401222887
+		"currentSpouse": 401222887,
+		"photo": "craig-mckay-jmURdhtm7Ng-unsplash.jpg"
 	},
 	{
 		"id": 401222887,
@@ -24,7 +25,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "assistant",
 		"parents": [],
-		"currentSpouse": 272822514
+		"currentSpouse": 272822514,
+		"photo": "hamid-tajik-uvnApE6gmnM-unsplash.jpg"
 	},
 	{
 		"id": 409574486,
@@ -37,7 +39,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "landscaper",
 		"parents": [],
-		"currentSpouse": 260451248
+		"currentSpouse": 260451248,
+		"photo": "christopher-campbell-i4OHxtxiMtk-unsplash.jpg"
 	},
 	{
 		"id": 260451248,
@@ -50,7 +53,8 @@ const people = [
 		"eyeColor": "brown",
 		"occupation": "assistant",
 		"parents": [],
-		"currentSpouse": 409574486
+		"currentSpouse": 409574486,
+		"photo": "timothy-barlin-2BJwlRZaR5M-unsplash.jpg"
 	},
 	{
 		"id": 629807187,
@@ -76,7 +80,8 @@ const people = [
 		"eyeColor": "black",
 		"occupation": "student",
 		"parents": [],
-		"currentSpouse": 629807187
+		"currentSpouse": 629807187,
+		"photo": "callum-blacoe-Id6U55AZMpg-unsplash.jpg"
 	},
 	{
 		"id": 982411429,

@@ -113,8 +113,15 @@ function loadTable(someArray) {
     }
 
 function deleteTable() {
-    let delTable = document.getElementById("mostWantedTable");
-    delTable.innerHTML = "";
+    // let delTable = document.getElementById("mostWantedTable");
+    // delTable.innerHTML = "";
+
+    let tableHeaderRowCount = 1;
+    let table = document.getElementById("mostWantedTable");
+    let rowCount = table.rows.length;
+    for ( let i = tableHeaderRowCount; i < rowCount; i++) {
+        table.deleteRow(tableHeaderRowCount);
+    }
 }
 
 
